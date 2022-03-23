@@ -8,9 +8,17 @@ import styled from "@emotion/styled";
 
 const TableContainer = styled.section`
   display: flex;
-  margin: 20px 0 30px 0;
+  margin: 30px 0 30px 0;
   justify-content: space-around;
   font-family: "Times New Roman";
+  @media (max-width: 600px) {
+    margin-top: 1rem;
+    align-items: center;
+    align-content: center;
+    margin-left: 20rem;
+    width: 685px;
+    height: 700px;
+  }
 `;
 
 const AllCompaniesContainer = styled.section`
@@ -18,13 +26,15 @@ const AllCompaniesContainer = styled.section`
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
+  @media (max-width: 600px) {
+    margin-top: 3rem;
+  }
 `;
 const Title = styled.h2`
-  margin-bottom: 20px;
-  font-size: 30px;
-  position: ${(props) => (props.absolute ? "absolute" : "null")};
-  top: -60px;
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
 `;
 
 const Data = () => {
@@ -87,8 +97,8 @@ const Data = () => {
 
   return (
     <Layout>
+      <Title>Statistics</Title>
       <AllCompaniesContainer>
-        <Title>Statistics</Title>
         <TableContainer>
           <div className="ag-theme-alpine" style={gridStyle}>
             <AgGridReact

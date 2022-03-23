@@ -2,7 +2,6 @@
 import React from "react";
 import Head from "next/head";
 import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
 
 export const Layout = (props) => {
   return (
@@ -15,9 +14,9 @@ export const Layout = (props) => {
           rel="stylesheet"
         />
       </Head>
+
       <Header />
       <main>{props.children}</main>
-      <Footer />
     </div>
   );
 };

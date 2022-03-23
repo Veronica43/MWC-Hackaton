@@ -7,17 +7,27 @@ import Link from "next/link";
 import axios from "axios";
 import styled from "@emotion/styled";
 import { Button } from "@mui/material";
+import { color } from "highcharts";
+import { ButtonPrimary } from "../../components/Home/style";
 
 const TableContainer = styled.section`
   display: flex;
   margin: 20px 0 30px 0;
   justify-content: space-around;
   font-family: "Times New Roman";
+  @media (max-width: 600px) {
+    margin-top: 1rem;
+    align-items: center;
+    align-content: center;
+    margin-left: 20rem;
+    width: 685px;
+    height: 700px;
+  }
 `;
 
 const ButtonCompany = styled(Button)`
-  color: black;
-  background-color: #01cbd0;
+  background-color: red;
+
   border-radius: 16px;
   position: ${(props) => (props.absolute ? "absolute" : "null")};
   bottom: 0;
@@ -29,6 +39,11 @@ const ButtonContainer = styled.div`
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-around;
+  gap: 1rem;
+  @media (max-width: 600px) {
+    display: flex;
+    margin-left: 20rem;
+  }
 `;
 
 const AllCompaniesContainer = styled.section`
@@ -37,13 +52,14 @@ const AllCompaniesContainer = styled.section`
   flex-wrap: nowrap;
   align-items: center;
   margin-bottom: 30px;
+  @media (max-width: 600px) {
+  }
 `;
 
 const Title = styled.h2`
-  margin-bottom: 20px;
-  font-size: 30px;
-  position: ${(props) => (props.absolute ? "absolute" : "null")};
-  top: -60px;
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
 `;
 
 const AllCompanies = () => {
@@ -121,8 +137,8 @@ const AllCompanies = () => {
 
   return (
     <Layout>
+      <Title>All Companies</Title>
       <AllCompaniesContainer>
-        <Title>All Companies</Title>
         <TableContainer>
           <div className="ag-theme-alpine" style={gridStyle}>
             <AgGridReact
@@ -139,22 +155,22 @@ const AllCompanies = () => {
           </div>
         </TableContainer>
         <ButtonContainer>
-          <ButtonCompany>
+          <ButtonPrimary>
             <Link href="/company-form">
               <a>
                 <li>Add Company</li>
               </a>
             </Link>
-          </ButtonCompany>
-          <ButtonCompany>
+          </ButtonPrimary>
+          <ButtonPrimary>
             <Link href="/flight-form">
               <a>
                 <li>Add Flight</li>
               </a>
             </Link>
-          </ButtonCompany>
-          <ButtonCompany>Fetch Companies</ButtonCompany>
-          <ButtonCompany onClick={onButtonClick}>Delete Company</ButtonCompany>
+          </ButtonPrimary>
+
+          <ButtonPrimary onClick={onButtonClick}>Delete Company</ButtonPrimary>
         </ButtonContainer>
       </AllCompaniesContainer>
     </Layout>

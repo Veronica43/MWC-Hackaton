@@ -12,6 +12,7 @@ import {
 import { useState } from "react";
 import Router from "next/router";
 import { countryList } from "../../services/paises";
+import { ButtonPrimary } from "../Home/style";
 
 const initalState = {
   company_id: "",
@@ -72,28 +73,27 @@ const FormFlight = () => {
   return (
     <Layout>
       <WrapperForm>
+        <Title>Add Flights</Title>
         <Form onSubmit={onSubmitForm}>
-          <Title absolute>Add Flights</Title>
           <Camp>
-            <Label>CompanyID</Label>
             <Input
               type="text"
               name="company_id"
               value={company_id}
               onChange={handleChange}
+              placeholder="CompanyID"
             />
           </Camp>
           <Camp>
-            <Label>Data</Label>
             <Input
               type="text"
               name="date"
               value={date}
               onChange={handleChange}
+              placeholder="Data"
             />
           </Camp>
           <Camp>
-            <Label>Origin Country</Label>
             <Select
               onChange={handleChange}
               name="origin_country"
@@ -107,7 +107,6 @@ const FormFlight = () => {
             </Select>
           </Camp>
           <Camp>
-            <Label>Destination Country</Label>
             <Select
               onChange={handleChange}
               name="destination_country"
@@ -122,37 +121,34 @@ const FormFlight = () => {
           </Camp>
 
           <Camp>
-            <Label>Origin Continent</Label>
             <Input
               type="text"
               name="origin_continent"
               value={origin_continent}
               onChange={handleChange}
+              placeholder="Origin Continent"
             />
           </Camp>
           <Camp>
-            <Label>Destination Continent</Label>
             <Input
               type="text"
               name="destination_continent"
               value={destination_continent}
               onChange={handleChange}
+              placeholder="Destination Continent"
             />
           </Camp>
           <Camp>
-            <Label>Seats</Label>
             <Input
               name="seats"
               type="text"
               value={seats}
               onChange={handleChange}
+              placeholder="Seats"
             />
           </Camp>
-
-          <ButtonSave type="submit" absolute>
-            Save Flight
-          </ButtonSave>
-          {error ? <p>Rellena todos los campos</p> : null}
+          <ButtonSave type="submit">Save Flight</ButtonSave>
+          {error ? <p> Rellena todos los campos</p> : null}
         </Form>
       </WrapperForm>
     </Layout>

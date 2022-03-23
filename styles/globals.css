@@ -6,12 +6,18 @@ html,
 }
 
 a {
-  color: inherit;
+  color: white;
   text-decoration: none;
 }
 
 body {
   font-family: "Montserrat", sans-serif;
+  background: radial-gradient(
+    circle,
+    rgba(250, 63, 251, 1) 4%,
+    rgba(164, 204, 200, 1) 54%
+  );
+  height: 80vh;
 }
 
 li {

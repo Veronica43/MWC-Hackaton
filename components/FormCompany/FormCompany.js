@@ -2,15 +2,8 @@ import { Layout } from "../Layout/Layout";
 import { useEffect, useState } from "react";
 import Router from "next/router";
 import axios from "axios";
-import {
-  Title,
-  ButtonSave,
-  Label,
-  WrapperForm,
-  Form,
-  Camp,
-  Input,
-} from "./style";
+import { Title, WrapperForm, Form, Camp, Input, ButtonSave } from "./style";
+import { ButtonPrimary } from "../Home/style";
 
 const FormCompany = () => {
   const [error, setError] = useState(false);
@@ -55,42 +48,42 @@ const FormCompany = () => {
   return (
     <Layout>
       <WrapperForm>
+        <Title>Add Company</Title>
         <Form column onSubmit={onSubmitForm}>
-          <Title>Add Company</Title>
           <Camp>
-            <Label>Name</Label>
             <Input
               type="text"
               name="name"
               value={name}
               onChange={handleChange}
+              placeholder="Name"
             />
           </Camp>
           <Camp>
-            <Label>Website</Label>
             <Input
               type="text"
               name="website"
               value={website}
               onChange={handleChange}
+              placeholder="Website"
             />
           </Camp>
           <Camp>
-            <Label>Total flights</Label>
             <Input
               type="number"
               name="total_flights"
               value={total_flights}
               onChange={handleChange}
+              placeholder="Total flights"
             />
           </Camp>
           <Camp>
-            <Label>Total seats</Label>
             <Input
               type="number"
               name="total_seats"
               value={total_seats}
               onChange={handleChange}
+              placeholder="Total seats"
             />
           </Camp>
           <ButtonSave type="submit">Save Company</ButtonSave>
