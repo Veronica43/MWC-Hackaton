@@ -26,7 +26,7 @@ export const ContainerText = styled.div`
 `;
 export const ButtonPrimary = styled.a`
   color: white;
-  background: black;
+  background: #00bfff;
   border: 1px solid white;
   border-radius: 1rem;
   padding: 0.8rem;

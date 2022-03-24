@@ -5,11 +5,8 @@ export const HeaderContainer = styled.header`
 
   align-items: center;
 
-  background: linear-gradient(
-    0deg,
-    rgba(34, 193, 195, 1) 0%,
-    rgba(199, 13, 153, 1) 100%
-  );
+  background: #00bfff;
+
   gap: 1rem;
 
   width: 100%;
@@ -29,7 +26,7 @@ export const Nav = styled.ul`
 
   @media screen and (max-width: 600px) {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     margin-top: 3rem;
   }
 `;

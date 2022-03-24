@@ -7,16 +7,14 @@ html,
 
 a {
   color: white;
+  font-weight: bold;
   text-decoration: none;
 }
 
 body {
   font-family: "Montserrat", sans-serif;
-  background: radial-gradient(
-    circle,
-    rgba(250, 63, 251, 1) 4%,
-    rgba(164, 204, 200, 1) 54%
-  );
+
+  background: white;
   height: 80vh;
 }
 

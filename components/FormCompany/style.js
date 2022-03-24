@@ -45,7 +45,7 @@ export const Title = styled.h3`
 export const ButtonSave = styled(Button)`
   position: ${(props) => (props.absolute ? "absolute" : "null")};
 
-  background-color: black;
+  background-color: #00bfff;
   color: white;
   width: 50%;
   height: 3rem;

@@ -8,6 +8,10 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 600px) {
+    margin-left: 5rem;
+    width: 150%;
+  }
 `;
 
 export const DashboardContainer = styled.div`
@@ -15,6 +19,8 @@ export const DashboardContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 600px) {
+  }
 `;
 
 export default function Grafica2() {
